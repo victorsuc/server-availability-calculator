@@ -56,16 +56,21 @@ python analise.py (Windows)
 python3 analise.py (MacOS)
 ---
 
-## Classe em Python
-O projeto possui uma classe chamada `DisponibilidadeServico`, responsável por:
+## Classes em Python
+
+### `DisponibilidadeServico`
+Classe responsável por:
 
 - receber os valores de **n**, **k** e **p**
 - validar os parâmetros informados
 - calcular a disponibilidade do serviço com base na fórmula matemática
 
-A classe utiliza a função `comb()` da biblioteca `math`, que calcula a combinação \(\binom{n}{i}\), ou seja, a quantidade de formas de escolher `i` servidores disponíveis entre `n`.
+### `AnaliseDisponibilidade`
+Classe responsável por:
 
-O programa também permite que o usuário informe os valores pelo terminal, tornando a execução mais simples e interativa.
+- gerar valores de disponibilidade para diferentes probabilidades `p`
+- comparar casos como `k = 1`, `k = n/2` e `k = n`
+- plotar gráficos 2D com **Matplotlib**
 
 ---
 
