@@ -54,7 +54,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 python analise.py (Windows)
 python3 analise.py (MacOS)
----
+```
 
 ## Classes em Python
 
