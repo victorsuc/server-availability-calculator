@@ -67,6 +67,3 @@ O programa também permite que o usuário informe os valores pelo terminal, torn
 - diego antonioli - 2214654
 
 ---
-
-## Repositório sugerido
-`distributed-service-availability`
