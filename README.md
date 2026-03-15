@@ -38,9 +38,9 @@ $$
 ## Resposta Comentada
 A fórmula foi deduzida a partir da probabilidade de existirem **exatamente \(i\) servidores disponíveis** entre \(n\).  
 
-- $$binom{n}{i}$$: quantidade de combinações possíveis  
-- $$p^i$$: probabilidade de \(i\) servidores estarem disponíveis  
-- $$(1-p)^{n-i}$$: probabilidade dos demais estarem indisponíveis  
+- $\binom{n}{i}$: quantidade de combinações possíveis  
+- $p^i$: probabilidade de $i$ servidores estarem disponíveis  
+- $(1-p)^{n-i}$: probabilidade dos demais estarem indisponíveis    
 
 Como o serviço funciona com **pelo menos \(k\)** servidores disponíveis, somamos os casos de \(i=k\) até \(i=n\).
 
