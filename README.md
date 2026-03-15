@@ -13,9 +13,9 @@ Este trabalho da disciplina de **Computação Distribuída** tem como objetivo c
 
 A disponibilidade do serviço é dada por:
 
-\[
+$$
 A(n,k,p)=\sum_{i=k}^{n}\binom{n}{i}p^i(1-p)^{n-i}
-\]
+$$
 
 Essa fórmula representa a probabilidade de existirem **pelo menos \(k\) servidores disponíveis** entre os \(n\) servidores.
 
@@ -24,23 +24,23 @@ Essa fórmula representa a probabilidade de existirem **pelo menos \(k\) servido
 ## Casos Extremos
 
 - **Se \(k=1\)**:  
-\[
+$$
 A(n,1,p)=1-(1-p)^n
-\]
+$$
 
 - **Se \(k=n\)**:  
-\[
+$$
 A(n,n,p)=p^n
-\]
+$$
 
 ---
 
 ## Resposta Comentada
 A fórmula foi deduzida a partir da probabilidade de existirem **exatamente \(i\) servidores disponíveis** entre \(n\).  
 
-- \(\binom{n}{i}\): quantidade de combinações possíveis  
-- \(p^i\): probabilidade de \(i\) servidores estarem disponíveis  
-- \((1-p)^{n-i}\): probabilidade dos demais estarem indisponíveis  
+- $$binom{n}{i}$$: quantidade de combinações possíveis  
+- $$p^i$$: probabilidade de \(i\) servidores estarem disponíveis  
+- $$(1-p)^{n-i}$$: probabilidade dos demais estarem indisponíveis  
 
 Como o serviço funciona com **pelo menos \(k\)** servidores disponíveis, somamos os casos de \(i=k\) até \(i=n\).
 
