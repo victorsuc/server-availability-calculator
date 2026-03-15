@@ -46,6 +46,14 @@ Como o serviço funciona com **pelo menos \(k\)** servidores disponíveis, somam
 
 ---
 
+## Instalação das dependências e Execução
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python analise.py (Windows)
+python3 analise.py (MacOS)
 ---
 
 ## Classe em Python
