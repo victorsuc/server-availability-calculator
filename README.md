@@ -51,7 +51,6 @@ Ou seja, ela considera:
 - até o caso em que todos os \(n\) servidores estão disponíveis
 
 ### Resumindo
-
 Em resumo, essa fórmula soma todas as situações em que o serviço ainda consegue funcionar.  
 Por isso, ela representa a **disponibilidade total do sistema replicado**.
 
@@ -215,6 +214,58 @@ De forma geral, foi possível concluir que:
 - aumentar **k** torna o sistema mais restritivo e reduz a disponibilidade
 - aumentar **n** pode melhorar ou piorar a disponibilidade, dependendo do valor de **k**
 - a replicação é mais vantajosa quando o serviço não exige que todos os servidores estejam disponíveis ao mesmo tempo
+
+## Simulador Estocástico
+
+Além da análise analítica, foi implementado um **simulador estocástico** com o objetivo de validar os resultados obtidos pela fórmula.
+
+### Descrição
+
+O simulador utiliza o método de Monte Carlo para estimar a disponibilidade do sistema a partir de várias execuções independentes (rodadas).
+
+Em cada rodada:
+
+- para cada um dos **n servidores**, é gerado um número aleatório entre 0 e 1  
+- o servidor é considerado disponível se o valor gerado for menor ou igual a **p**  
+- é feita a contagem dos servidores disponíveis  
+- o serviço é considerado operacional se o número de servidores disponíveis for **maior ou igual a k**  
+
+Ao final, calcula-se a proporção de rodadas em que o sistema funcionou, obtendo a **disponibilidade experimental**.
+
+---
+
+### Comparação entre teoria e prática
+
+Para cada valor de **p**, foi feita a comparação entre:
+
+- o valor **analítico**, obtido pela fórmula  
+- o valor **experimental**, obtido pela simulação  
+
+Os resultados são apresentados em **tabelas e gráficos 2D**, permitindo visualizar a aproximação entre os dois métodos.
+
+---
+
+### Resultado observado
+
+Os resultados mostram que os valores experimentais se aproximam fortemente dos valores analíticos.
+
+Pequenas diferenças podem ocorrer devido à aleatoriedade da simulação, mas essas diferenças diminuem conforme o número de rodadas aumenta.
+
+---
+
+### Interpretação
+
+Esse comportamento confirma que:
+
+- a fórmula matemática modela corretamente o problema  
+- a disponibilidade segue uma distribuição binomial  
+- a simulação converge para o valor teórico (Lei dos Grandes Números)  
+
+---
+
+### Gráfico da comparação (Simulação vs Analítico)
+
+![Gráfico do simulador estocástico](imagens/simulador_estocastico.png)
 
 ## Integrantes
 - Victor Sucupira - 1410777
